@@ -1,5 +1,14 @@
 <div id="commentSection">
   <h3>Comments</h3>
+  <div id="commentDisclaimer">
+    A warning for you
+    <div id="stupidFuckLine"></div>
+    When the new Camellia Wiki is live, it may not transfer comment data correctly because these systems handle data differently. We will
+    ensure most data is recovered when migrating to the new site, and we encourage users to leave a comments on the new site instead of this
+    old one.
+    <br />
+    <a href="https://alpha.camellia.wiki/">Click here to view the new site.</a>
+  </div>
   <div class="comment-wrapper">
     <form method="POST" action="#" id="my-comment-form" onsubmit="return false;">
       <div class="comment-card my-card" style="--profile-accent: var(--colorWhite)">
@@ -17,3 +26,24 @@
   </div>
   <div id="comment-loader"><i class="ph-bold ph-arrow-clockwise"></i></div>
 </div>
+
+<style lang="scss">
+  #commentDisclaimer {
+    border-left: 2px solid #dd0000;
+    background-color: #281824;
+    padding: 12px 16px;
+    margin-left: 0;
+    font-size: 18px;
+    text-align: center;
+    line-height: 27px;
+
+    #stupidFuckLine {
+      background: linear-gradient(to right, #e442b7, #ef656e);
+      margin: auto;
+      width: 66.666667%;
+      height: 2px;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>
