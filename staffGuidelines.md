@@ -3,8 +3,15 @@ layout: article
 title: Staff Guidelines
 author: Camellia Server Staff. These guidelines were last updated on 6/15/24
 ---
-
 ## A Brief History
+
+<div class="fuckingShit" id="commentDisclaimer">
+    A warning for you
+    <div id="stupidFuckLine"></div>
+    This page is no longer being updated as of 9/22/2024.
+    <br />
+    <a href="https://alpha.camellia.wiki/community/server/guidelines">Click here to view the supported article.</a>
+</div>
 
 > Go to the [Server Constitution](/camelliaConstitution.html).
 
