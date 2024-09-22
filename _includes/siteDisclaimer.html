@@ -1,20 +1,51 @@
-<a id="siteDisclaimer" href="https://alpha.camellia.wiki/"><p>Click here to check out the new wiki!</p></a>
+<a id="siteDisclaimer" href="https://alpha.camellia.wiki/">
+  <div id="dim">
+    <p>Eventually, this site will be replaced. Click here to check out the new wiki!</p>
+  </div>
+</a>
 
-<style>
+<style lang="scss">
+  #dim {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    transition: background 400ms;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
   #siteDisclaimer {
     position: sticky;
     bottom: 64px;
     margin-top: auto;
     background: url(/assets/images/home-header.png) no-repeat center center/cover;
     width: 100%;
-    padding: 10px;
+    padding-top: 22px;
+    padding-bottom: 22px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-content: center;
     align-items: center;
+    overflow: hidden;
+
+    &:hover > #dim {
+      transition: background 200ms;
+      background: rgba(0, 0, 0, 0);
+    }
   }
+
   #siteDisclaimer p {
+    display: flex;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
     color: white;
     font-size: 20px;
+  }
+  .animation {
+    white-space: nowrap;
+    clear: both;
+    /* float: left; */
   }
 </style>
