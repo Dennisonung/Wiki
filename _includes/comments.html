@@ -1,54 +1,56 @@
 <div id="commentSection">
-  <h3>Comments</h3>
-  <div id="commentDisclaimer">
-    A warning for you
-    <div id="stupidFuckLine"></div>
-    When the new Camellia Wiki is live, it may not transfer comment data correctly because these systems handle data differently. We will
-    ensure most data is transferred when migrating to the new site. We encourage users to leave a comment on the new site instead of this
-    old one.
-    <br />
-    <a href="https://alpha.camellia.wiki/">Click here to view the new site.</a>
-  </div>
-  <div class="comment-wrapper">
-    <form method="POST" action="#" id="my-comment-form" onsubmit="return false;">
-      <div class="comment-card my-card" style="--profile-accent: var(--colorWhite)">
-        <div class="profile-left">
-          <img id="pfp" src="/assets/images/avatar.png" />
-        </div>
-        <div class="comment-poster">
-          <textarea id="comment-input" placeholder="Type some text here! Press enter to post. Use shift+enter for a new line."></textarea>
-          <div class="buttonPost">
-            <i class="ph-bold ph-paper-plane-right"></i>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div id="comment-loader"><i class="ph-bold ph-arrow-clockwise"></i></div>
+	<h3>Comments</h3>
+	<div id="commentDisclaimer">
+		A notice for you
+		<div id="stupidFuckLine"></div>
+		As we transition to the new Camellia Wiki, comments may display incorrectly here as the systems handling the
+		data differ. We will ensure most data is transferred during migration. We encourage users to leave a comment on
+		the new site. Posting new comments on this old site will be disabled once the new Camellia Wiki launches in
+		beta.
+		<br />
+		<a href="https://alpha.camellia.wiki/">Click here to view the new site.</a>
+	</div>
+	<div class="comment-wrapper">
+		<form method="POST" action="#" id="my-comment-form" onsubmit="return false;">
+			<div class="comment-card my-card" style="--profile-accent: var(--colorWhite)">
+				<div class="profile-left">
+					<img id="pfp" src="/assets/images/avatar.png" />
+				</div>
+				<div class="comment-poster">
+					<textarea id="comment-input"
+						placeholder="Type some text here! Press enter to post. Use shift+enter for a new line."></textarea>
+					<div class="buttonPost">
+						<i class="ph-bold ph-paper-plane-right"></i>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id="comment-loader"><i class="ph-bold ph-arrow-clockwise"></i></div>
 </div>
 
 <style lang="scss">
-  #commentDisclaimer {
-    border-left: 2px solid #dd0000;
-    background-color: #281824;
-    padding: 12px 16px;
-    font-size: 18px;
-    text-align: center;
-    line-height: 27px;
+	#commentDisclaimer {
+		border-left: 2px solid #dd0000;
+		background-color: #281824;
+		padding: 12px 16px;
+		font-size: 18px;
+		text-align: center;
+		line-height: 27px;
 
-    #stupidFuckLine {
-      background: linear-gradient(to right, #e442b7, #ef656e);
-      margin: auto;
-      width: 66.666667%;
-      height: 2px;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-  }
+		#stupidFuckLine {
+			background: linear-gradient(to right, #e442b7, #ef656e);
+			margin: auto;
+			width: 66.666667%;
+			height: 2px;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
+	}
 
-  .fuckingShit {
-    margin-left: 32px !important;
-    margin-right: 32px;
-    margin-bottom: 32px;
-  }
+	.fuckingShit {
+		margin-left: 32px !important;
+		margin-right: 32px;
+		margin-bottom: 32px;
+	}
 </style>
