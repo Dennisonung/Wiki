@@ -49,7 +49,7 @@ const Functions = {
 
 		let data;
 		try {
-			const response = await fetch(`https://backend.camellia.wiki/${url}`, { headers, method, body});
+			const response = await fetch(`https://backend-legacy.camellia.wiki/${url}`, { headers, method, body});
 			if (!response.ok || response.status != 200) {
 				throw new Error(`Failed to communicate to API (response was ${response.ok ? "OK" : "NOT OK"}; status ${response.status})!`);
 			};
