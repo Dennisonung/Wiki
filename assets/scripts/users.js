@@ -560,8 +560,10 @@ if (commentSection) {
 			commentProfile.className = "profile-left";
 
 			const commentProfileImg = document.createElement("img");
+			const skibidi1 = user.avatar || userDefaults.avatar;
 			commentProfileImg.id = "pfp";
-			commentProfileImg.src = `${user.avatar ? user.avatar : userDefaults.avatar}`;
+			commentProfileImg.src = skibidi1;
+			commentProfileImg.onerror = () => { commentProfileImg.src = userDefaults.avatar; };
 			commentProfile.appendChild(commentProfileImg);
 
 			commenReplyCard.appendChild(commentProfile);
@@ -728,8 +730,10 @@ if (commentSection) {
 			commentProfile.className = "profile-left";
 
 			const commentProfileImg = document.createElement("img");
+			const skibidi1 = comment.author.avatar || userDefaults.avatar;
 			commentProfileImg.id = "pfp";
-			commentProfileImg.src = `${comment.author.avatar ? comment.author.avatar : userDefaults.avatar}`;
+			commentProfileImg.src = skibidi1;
+			commentProfileImg.onerror = () => { commentProfileImg.src = userDefaults.avatar; };
 			commentProfile.appendChild(commentProfileImg);
 
 			commentCard.appendChild(commentProfile);
