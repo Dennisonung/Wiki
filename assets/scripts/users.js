@@ -676,7 +676,7 @@ if (commentSection) {
 
 		} else if (commentIcon == "comment-report") {
 			if (!dh || !user) return;
-			Functions.sendToast({ title: "A new feature?", content: "That feature is not implemented yet but will be soon!", style: "error" });
+			Functions.sendToast({ title: "This will never be added", content: "Use the new site folks!!", style: "error" });
 		};
 		return;
 	}

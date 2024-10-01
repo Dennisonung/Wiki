@@ -1491,7 +1491,7 @@ header .header-shared .sidebar-wrapper #navSidebar .btn-container a.kofi-button 
   padding: 0;
 }
 #commentSection .comment-wrapper .comment-card .comment-holder .comment-wrapper .comment-icons-container {
-  align-self: center;
+  margin-top: 6px;
   justify-self: center;
 }
 #commentSection .comment-wrapper .comment-card .comment-holder .comment-wrapper .comment-poster .buttonPost:not(:last-child) {
