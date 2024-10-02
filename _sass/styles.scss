@@ -175,19 +175,41 @@ footer {
   margin-top: auto;
   height: 64px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
 
-footer #footerText {
-  font-size: 20.25px;
-  font-style: normal;
-  text-align: center;
-}
+  a.bigLogoLol {
+    display: flex;
+    position: absolute;
+    left: 0.25rem;
+    align-items: center;
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-#legalText {
-  font-size: 20.25px;
+  a.bigLogoLol:hover {
+    background-color: #45283d;
+  }
+
+  #footerStuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    #footerText {
+      font-size: 20.25px;
+      font-style: normal;
+      text-align: center;
+    }
+
+    #legalText {
+      font-size: 20.25px;
+    }
+  }
 }
 
 /* links */
