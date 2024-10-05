@@ -9,11 +9,6 @@
   transition: $x;
 }
 
-/* Import files */
-@import "./variables", "./highlights", "./author", "./modals", "./mediaQueries";
-
-@import "./header/shared", "./titleContainer/shared", "./comments/shared", "./profile/shared", "./toast/shared";
-
 /* Global elements, such as headers, footers, and body. */
 /* very dark theme, tried to keep this simple */
 html {
@@ -69,8 +64,8 @@ html {
 body {
   font-family: var(--font-default);
   font-size: 16px;
-  background: #30151f;
-  color: white;
+  background: linear-gradient(180deg, rgba(240, 108, 155, 0.2) 0%, rgba(48, 37, 41, 0.2) 100%), #111;
+  color: var(--colorWhite);
   min-height: 100vh;
 
   -webkit-font-smoothing: subpixel-antialiased;
@@ -111,6 +106,10 @@ main .itemWithSmallFigure {
     align-self: center;
     margin-bottom: 0;
   }
+}
+
+.bitch {
+  text-align: center;
 }
 
 main .makeBig {
@@ -175,24 +174,46 @@ footer {
   margin-top: auto;
   height: 64px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
 
-footer #footerText {
-  font-size: 20.25px;
-  font-style: normal;
-  text-align: center;
-}
+  a.bigLogoLol {
+    display: flex;
+    position: absolute;
+    left: 0.25rem;
+    align-items: center;
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-#legalText {
-  font-size: 20.25px;
+  a.bigLogoLol:hover {
+    background-color: #45283d;
+  }
+
+  #footerStuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    #footerText {
+      font-size: 20.25px;
+      font-style: normal;
+      text-align: center;
+    }
+
+    #legalText {
+      font-size: 20.25px;
+    }
+  }
 }
 
 /* links */
 a {
-  color: silver;
+  color: var(--colorLinks);
   text-decoration: none;
 }
 
@@ -203,7 +224,7 @@ a:hover {
 
 /* Fixed button code */
 .buttonDefault a {
-  background-color: rgba(40, 24, 36, 0.6);
+  background: var(--colorCardDivisor) 0% 0% no-repeat padding-box;
   color: var(--colorWhite);
   text-decoration: none;
   font-size: 20.25px;
@@ -228,7 +249,7 @@ a:hover {
 }
 
 .buttonDefault a:hover {
-  background-color: rgb(40, 24, 36);
+  background: var(--colorCardDivisorHover) 0% 0% no-repeat padding-box;
   color: var(--colorWhite);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25) inset;
 }
@@ -246,25 +267,22 @@ a:hover {
 
 /* cards */
 .card {
-  background-color: rgba(40, 24, 36, 0.6);
-  //max-width: 1255px;
-  width: 100% !important;
+  background: var(--colorCards) 0% 0% no-repeat padding-box;
+  max-width: 827px;
   height: fit-content;
-  border-radius: 8px;
+  border-radius: 35px;
   line-height: 26px;
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1), 0 32px 40px 0 rgba(0, 0, 0, 0.24);
 }
 
 .miniCard {
-  background-color: rgba(40, 24, 36, 0.6);
+  background: var(--colorCards) 0% 0% no-repeat padding-box;
   // max-width: 556px;
   // max-width: 412px;
   height: fit-content;
   block-size: fit-content;
-  border-radius: 8px;
+  border-radius: 35px;
   line-height: 26px;
   margin-block-end: 10px;
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1), 0 32px 40px 0 rgba(0, 0, 0, 0.24);
 
   padding-bottom: 32px; // uhhhhh
 
@@ -371,17 +389,19 @@ blockquote.tip {
 }
 
 .cardHeader {
+  background: linear-gradient(180deg, rgba(102, 31, 87, 0.3) 0%, rgba(187, 58, 159, 0.12) 50.52%, rgba(217, 130, 198, 0) 100%),
+    var(--colorTriary);
   display: flex;
   justify-content: space-between;
-  //   border-top: 2px solid var(--colorBorderTertiary);
-  //   border-bottom: 2px solid var(--colorBorderTertiary);
-  border: solid 1px #808080;
-  height: 72px;
+  border-top: 2px solid var(--colorBorderTertiary);
+  border-bottom: 2px solid var(--colorBorderTertiary);
+  height: 84px;
   width: 100%;
 
   &:first-of-type {
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-top: 1px solid var(--colorBorderTertiary);
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
   }
 
   p,
@@ -697,11 +717,9 @@ hr {
 #contentWedge {
   flex-shrink: 0;
   flex-direction: column;
-  background-color: rgba(40, 24, 36, 0.6);
-  border-radius: 8px;
+  background: var(--colorCardDivisor);
+  border-radius: 35px;
   width: 283px;
-
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1), 0 32px 40px 0 rgba(0, 0, 0, 0.24);
 
   #wedgeContainer {
     position: sticky;
@@ -783,11 +801,10 @@ hr {
 #navWedge {
   flex-shrink: 0;
   flex-direction: column;
-  background-color: rgba(40, 24, 36, 0.6);
-  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(246, 65, 141, 0) 0%, rgba(246, 65, 141, 0.08) 51.04%, rgba(91, 63, 75, 0.2) 100%),
+    var(--colorCards);
+  border-radius: 35px;
   width: 283px;
-
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1), 0 32px 40px 0 rgba(0, 0, 0, 0.24);
 
   #navWedgeContainer {
     position: sticky;
@@ -920,19 +937,15 @@ em {
   gap: 10px;
   flex-shrink: 0;
 
-  max-width: 1644px;
-
-  background-color: rgba(56, 46, 55, 0.5);
+  background: var(--colorContentContainer) 0% 0% no-repeat padding-box;
   box-sizing: border-box;
-  border-radius: 8px;
-  padding: 40px;
+  border: 2px solid var(--colorCardDivisor);
+  border-radius: 40px;
+  padding: 32px;
   margin-bottom: 72px;
   min-height: 727px;
 
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-
-  box-shadow: 0 32px 40px 0 rgba(0, 0, 0, 0.24), inset 0 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* add a layout wrapper to keep things sane with new comment section */
@@ -1095,43 +1108,4 @@ figure.floatImage {
 // some class to stop scrolling (only in js)
 .stop-scrolling {
   overflow: hidden;
-}
-
-#titleContainer {
-  min-width: 103rem !important;
-}
-
-.header {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    linear-gradient(to bottom, #2a2228 0%, rgba(42, 34, 40, 0.52) 49%, rgba(42, 34, 40, 0)) !important;
-}
-
-.header-inner {
-  background: none !important;
-  border-bottom: none !important;
-  align-self: center !important ;
-  align-items: center !important;
-}
-
-#main-bar {
-  border: solid 1px #494446 !important;
-  border-radius: 8px !important;
-  padding-right: 2px !important;
-}
-
-.searchBtn {
-  border-radius: 5px !important;
-  align-self: center !important;
-}
-
-#commentSection {
-  border-radius: 8px !important;
-  background-color: rgba(40, 24, 36, 0.6) !important;
-  max-width: unset !important;
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.1), 0 32px 40px 0 rgba(0, 0, 0, 0.24) !important;
-}
-
-:root {
-  --colorCardDivisor: #ffffff0d !important;
-  --colorCards: rgba(40, 24, 36) !important;
 }
