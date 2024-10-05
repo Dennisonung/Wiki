@@ -385,10 +385,10 @@
  * that we don't have to spam !important
  */
 
-@media screen and not (max-width: 645px) {
-  @import "./desktop";
+@media not all and (max-width: 645px) {
+  @import "desktop";
 }
 
-@media screen and (max-width: 645px) {
-  @import "./mobile";
+@media all and (max-width: 645px) {
+  @import "mobile";
 }
